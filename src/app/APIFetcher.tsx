@@ -33,7 +33,7 @@ export default function APIFetcher() {
     const startTime = Date.now();
 
     const res = await fetch(
-      `http://localhost:3000/api/${
+      `/api/${
         selections.edge === "global" ? "edge-global" : "edge-region"
       }?numofqueries=${selections.numOfQueries}`
     );
@@ -50,7 +50,7 @@ export default function APIFetcher() {
     const startTime = Date.now();
 
     const res = await fetch(
-      `http://localhost:3000/api/serverless?numofqueries=${selections.numOfQueries}`
+      `/api/serverless?numofqueries=${selections.numOfQueries}`
     );
     const data = await res.json();
 
